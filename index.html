@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sciemec – Mobile Science Labs & Construction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="logo-wrap">
+        <img src="images/logo.jpg" alt="Sciemec Logo" class="logo">
+        <div class="brand-text">
+            <h1>Sciemec</h1>
+            <p class="tagline">Smart Science Labs & Construction</p>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Bringing Modern Science Labs to Every School</h2>
+            <p>
+                Sciemec designs, builds, and equips mobile and fixed science laboratories
+                so that learners can experience real, practical science regardless of location.
+            </p>
+            <div class="hero-actions">
+                <a href="gallery.html" class="btn primary">View Our Work</a>
+                <a href="contact.html" class="btn secondary">Request a Quotation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Services -->
+    <section class="section">
+        <h2>What We Do</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>Mobile Science Labs</h3>
+                <p>
+                    Fully equipped mobile laboratories that bring practical science
+                    to schools without traditional lab infrastructure.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Lab Construction & Upgrades</h3>
+                <p>
+                    Design and construction of new school laboratories,
+                    including benches, gas, water, and safe storage solutions.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Equipment & Consumables</h3>
+                <p>
+                    Supply of essential laboratory equipment, chemicals, glassware,
+                    models, and teaching aids for all science subjects.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Gallery preview -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Project Gallery</h2>
+            <a href="gallery.html" class="link-more">View full gallery →</a>
+        </div>
+        <div class="gallery-grid">
+            <img src="images/gallery1.jpg" alt="Sciemec project photo 1">
+            <img src="images/gallery2.jpg" alt="Sciemec project photo 2">
+            <img src="images/gallery3.jpg" alt="Sciemec project photo 3">
+            <img src="images/gallery4.jpg" alt="Sciemec project photo 4">
+            <img src="images/gallery5.jpg" alt="Sciemec project photo 5">
+            <img src="images/gallery6.jpg" alt="Sciemec project photo 6">
+        </div>
+    </section>
+
+    <!-- Contact teaser -->
+    <section class="section callout">
+        <h2>Need a Lab for Your School?</h2>
+        <p>
+            Talk to us about mobile labs, new lab construction, or a starter equipment package
+            that matches your budget and syllabus.
+        </p>
+        <a href="contact.html" class="btn primary">Contact Sciemec</a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© <span id="year"></span> Sciemec. All rights reserved.</p>
+</footer>
+
+<script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
+

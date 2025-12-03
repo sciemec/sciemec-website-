@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sciemec – Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="logo-wrap">
+        <img src="images/logo.jpg" alt="Sciemec Logo" class="logo">
+        <div class="brand-text">
+            <h1>Sciemec</h1>
+            <p class="tagline">Smart Science Labs & Construction</p>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="section">
+        <h2>Get in Touch</h2>
+        <p class="section-intro">
+            Send us your enquiry about mobile labs, new lab construction, or equipment packages.
+            We’ll respond with a customised quotation.
+        </p>
+
+        <div class="contact-layout">
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <p><strong>Company:</strong> Sciemec</p>
+                <p><strong>Location:</strong> Harare, Zimbabwe</p>
+                <p><strong>Phone:</strong> +263 (put your number here)</p>
+                <p><strong>Email:</strong> info@sciemec.com (replace with your real email)</p>
+                <p><strong>Website:</strong> www.sciemec.com (optional)</p>
+            </div>
+
+            <form class="contact-form" method="post" action="#">
+                <!-- If you later use Formspree, replace # with their action URL -->
+                <h3>Send a Message</h3>
+                <label>
+                    Your Name
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    School / Organisation
+                    <input type="text" name="school">
+                </label>
+
+                <label>
+                    Email Address
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="phone">
+                </label>
+
+                <label>
+                    Message
+                    <textarea name="message" rows="5" placeholder="Tell us what you need…"
+                              required></textarea>
+                </label>
+
+                <button type="submit" class="btn primary">Send Message</button>
+
+                <p class="form-note">
+                    * This demo form does not send emails yet.  
+                    We can connect it to Formspree later so enquiries go to your inbox.
+                </p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© <span id="year"></span> Sciemec. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
