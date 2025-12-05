@@ -3,49 +3,850 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sciemec – Smart Science Labs & Construction</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
+    <title>Sciemec Construction | Building Better Spaces</title>
 
+    <style>
+        :root {
+            --primary: #0b2340;   /* deep navy */
+            --accent:  #f59e0b;   /* warm construction orange */
+            --light:   #f5f5f7;
+            --text:    #1f2933;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER / NAVBAR */
+        header {
+            background: linear-gradient(135deg, #020617, var(--primary));
+            color: #fff;
+        }
+
+        .top-bar {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .top-bar span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.75rem 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .brand-text h1 {
+            font-size: 1.3rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .brand-text p {
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        nav li a {
+            position: relative;
+        }
+
+        nav li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.2s ease;
+        }
+
+        nav li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: #111827;
+            padding: 0.55rem 1rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+        }
+
+        /* HERO */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1rem 3rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .hero h2 {
+            font-size: 2.1rem;
+            color: #f9fafb;
+            margin-bottom: 1rem;
+        }
+
+        .hero h2 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            color: #e5e7eb;
+            font-size: 0.98rem;
+            max-width: 32rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tags span {
+            border-radius: 999px;
+            border: 1px solid rgba(249, 250, 251, 0.35);
+            padding: 0.25rem 0.7rem;
+            font-size: 0.75rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            border-radius: 999px;
+            padding: 0.7rem 1.4rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn-outline {
+            border-radius: 999px;
+            padding: 0.7rem 1.4rem;
+            border: 1px solid #94a3b8;
+            background: transparent;
+            color: #e5e7eb;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .hero-meta {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .hero-card {
+            background: #020617;
+            border-radius: 1.5rem;
+            padding: 1.5rem 1.5rem 1.2rem;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.55);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            color: #e5e7eb;
+        }
+
+        .hero-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            color: #f9fafb;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 0.75rem;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-stat {
+            background: rgba(15,23,42,0.9);
+            border-radius: 0.9rem;
+            padding: 0.7rem 0.8rem;
+            border: 1px solid rgba(148,163,184,0.45);
+        }
+
+        .hero-stat strong {
+            font-size: 1rem;
+            color: var(--accent);
+        }
+
+        .hero-list {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            color: #cbd5f5;
+        }
+
+        /* MAIN CONTENT SECTIONS */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1rem 3.5rem;
+        }
+
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        .section-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.25rem;
+            color: #111827;
+        }
+
+        .section-header p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+            gap: 1.8rem;
+            align-items: flex-start;
+        }
+
+        .about-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1.4rem 1.5rem;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.08);
+            border: 1px solid #e5e7eb;
+            font-size: 0.9rem;
+        }
+
+        .about-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-list {
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .about-list li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* SERVICES */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1.2rem 1.3rem 1.3rem;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.07);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-pill {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.3rem;
+        }
+
+        .service-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .service-card p {
+            font-size: 0.86rem;
+            color: #4b5563;
+            margin-bottom: 0.55rem;
+        }
+
+        .service-card ul {
+            font-size: 0.82rem;
+            padding-left: 1rem;
+            color: #4b5563;
+        }
+
+        .service-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .service-footer a {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* WHY CHOOSE US */
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .pill {
+            background: #111827;
+            color: #e5e7eb;
+            border-radius: 999px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.78rem;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+            gap: 1.8rem;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1.3rem 1.4rem;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.08);
+            border: 1px solid #e5e7eb;
+            font-size: 0.9rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-row {
+            margin-bottom: 0.45rem;
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .contact-row span:first-child {
+            font-weight: 600;
+            min-width: 4.5rem;
+        }
+
+        form label {
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+            color: #4b5563;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            border-radius: 0.6rem;
+            border: 1px solid #d1d5db;
+            padding: 0.6rem 0.7rem;
+            font-size: 0.85rem;
+            margin-bottom: 0.7rem;
+        }
+
+        form textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        form button {
+            background: var(--primary);
+            color: #f9fafb;
+            border-radius: 999px;
+            padding: 0.65rem 1.4rem;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #020617;
+            color: #9ca3af;
+            padding: 1.3rem 1rem;
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.8rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: minmax(0,1fr);
+                padding-top: 1.5rem;
+            }
+
+            .hero-card {
+                margin-top: -0.5rem;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            nav ul {
+                display: none; /* simple mobile: hide menu for now */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+
+            .brand-text h1 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
 <body>
+
 <header>
-    <div class="logo">
-        <img src="images/logo.png" alt="Sciemec Logo">
-        <h1>Sciemec</h1>
-        <p>Smart Science Labs & Construction</p>
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <span>📞 +263 781 955 955 / +263 713 257 669</span>
+        <span>📱 WhatsApp: +263 775 285 106</span>
+        <span>✉️ Sciemeq@gmail.com</span>
     </div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="labs.html">Science Labs</a>
-        <a href="construction.html">Construction</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+
+    <!-- Main navigation -->
+    <div class="nav">
+        <div class="brand">
+            <!-- Replace text box with your real logo image if you have one -->
+            <!-- Example: <img src="images/sciemec-logo.png" alt="Sciemec Logo" class="brand-logo-img" /> -->
+            <div class="brand-logo">S</div>
+            <div class="brand-text">
+                <h1>SCIEMEC CONSTRUCTION</h1>
+                <p>Carpentry • Ceilings • Painting • Gas Installation</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#hse">Health & Safety</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a class="nav-cta" href="https://wa.me/263775285106" target="_blank">WhatsApp Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div>
+            <h2>Quality Construction <span>Delivered On Time</span></h2>
+            <p>
+                Sciemec Construction provides professional carpentry, ceiling, painting and gas installation
+                services for homes, offices and industrial projects in Zimbabwe. We focus on
+                quality workmanship, safety and honest pricing.
+            </p>
+
+            <div class="hero-tags">
+                <span>Residential & Commercial</span>
+                <span>Supply & Fix</span>
+                <span>Custom Designs</span>
+                <span>Health & Safety First</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">Request a Site Visit</a>
+                <a href="#services" class="btn-outline">View Our Services</a>
+            </div>
+
+            <p class="hero-meta">
+                Based at 15015 Ganges Road Extension, Belvedere, Harare • Serving customers across Zimbabwe
+            </p>
+        </div>
+
+        <aside class="hero-card">
+            <h3>Why Clients Choose Sciemec</h3>
+            <div class="hero-grid">
+                <div class="hero-stat">
+                    <strong>On-Site Control</strong>
+                    <p class="hero-list">
+                        Strong control over inventory, deliveries, damage loss and invoicing.
+                    </p>
+                </div>
+                <div class="hero-stat">
+                    <strong>Qualified Teams</strong>
+                    <p class="hero-list">
+                        Well-trained carpenters, painters and installers focused on safety.
+                    </p>
+                </div>
+                <div class="hero-stat">
+                    <strong>Partnership</strong>
+                    <p class="hero-list">
+                        We work as a pro-active partner to achieve your critical success factors.
+                    </p>
+                </div>
+                <div class="hero-stat">
+                    <strong>Safety First</strong>
+                    <p class="hero-list">
+                        All work completed within a strong health & safety culture.
+                    </p>
+                </div>
+            </div>
+        </aside>
+    </section>
 </header>
 
-<section class="hero">
-    <h2>Modern Science Labs for the Next Generation</h2>
-    <p>Sciemec designs and builds smart science laboratories, mobile labs and construction solutions across Zimbabwe and beyond.</p>
+<main>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="section-header">
+            <h2>About Sciemec Construction</h2>
+            <p>Committed to quality, safety and reliable delivery.</p>
+        </div>
 
-    <div class="buttons">
-        <a class="btn" href="contact.html">Request a Quotation</a>
-        <a class="btn-secondary" href="projects.html">View Our Projects</a>
-    </div>
-</section>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>
+                    Sciemec Construction exists to become a primary resource for residential and
+                    commercial construction services in Zimbabwe. We aim to provide quality service
+                    at competitive pricing, while delivering a safe and efficient work environment
+                    for every project.
+                </p>
 
-<section class="why">
-    <h2>Why Schools Choose Sciemec</h2>
-    <ul>
-        <li>Fully equipped mobile and fixed science laboratories</li>
-        <li>Design, construction & installation under one roof</li>
-        <li>Curriculum-aligned equipment & consumables</li>
-        <li>Training and support for teachers</li>
-    </ul>
-</section>
+                <h3 style="margin-top: 1rem;">Keys to Success</h3>
+                <ul class="about-list">
+                    <li>Customer referrals from satisfied homeowners and businesses.</li>
+                    <li>Exceeding expectations on quality, timeliness and price.</li>
+                    <li>Reliable workmanship and clear communication on every job.</li>
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <h3>What We Do</h3>
+                <p>
+                    We provide a full range of building services – from structural carpentry to
+                    fine finishing – with a focus on practical solutions that match your budget
+                    and timeline.
+                </p>
+                <ul class="about-list">
+                    <li>Garden and structural carpentry & joinery.</li>
+                    <li>Ceiling installation, repair and maintenance.</li>
+                    <li>Interior & exterior painting for buildings.</li>
+                    <li>Gas piping and appliance installation.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+        <div class="section-header">
+            <h2>Our Core Services</h2>
+            <p>End-to-end solutions from design to final finishes.</p>
+        </div>
+
+        <div class="service-grid">
+            <!-- Carpentry -->
+            <article class="service-card">
+                <div>
+                    <div class="service-pill">Carpentry & Joinery</div>
+                    <h3>Structural & Finishing Carpentry</h3>
+                    <p>
+                        We construct and install doors, frames, cupboards, shelving, garden structures
+                        and other wooden fittings – tailored to your design.
+                    </p>
+                    <ul>
+                        <li>Garden carpentry and outdoor structures.</li>
+                        <li>Built-in cupboards and storage.</li>
+                        <li>Door hanging, locks & door furniture.</li>
+                        <li>Repairs, upgrades and renovations.</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <span>Ideal for homes & small developments.</span>
+                    <!-- Later you can create carpentry.html and link -->
+                    <a href="#">Read more</a>
+                </div>
+            </article>
+
+            <!-- Ceilings -->
+            <article class="service-card">
+                <div>
+                    <div class="service-pill">Ceiling Installation</div>
+                    <h3>Supply & Fix Ceiling Solutions</h3>
+                    <p>
+                        Professional ceiling installation for residential, commercial and industrial
+                        buildings using a wide range of materials.
+                    </p>
+                    <ul>
+                        <li>PVC ceilings and decorative panels.</li>
+                        <li>Gyproc Rhinoboard ordinary & plastered.</li>
+                        <li>Suspended ceilings for offices & shops.</li>
+                        <li>Repairs and maintenance of damaged ceilings.</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <span>Supply & fix or labour-only options.</span>
+                    <a href="#">Read more</a>
+                </div>
+            </article>
+
+            <!-- Painting -->
+            <article class="service-card">
+                <div>
+                    <div class="service-pill">Painting</div>
+                    <h3>Interior & Exterior Painting</h3>
+                    <p>
+                        We protect and beautify your building with high-quality paint systems that
+                        withstand weather and environmental wear.
+                    </p>
+                    <ul>
+                        <li>Surface preparation and crack repairs.</li>
+                        <li>Interior wall & ceiling painting.</li>
+                        <li>Exterior facades and boundary walls.</li>
+                        <li>Protective and decorative coatings.</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <span>For houses, offices & complexes.</span>
+                    <a href="#">Read more</a>
+                </div>
+            </article>
+
+            <!-- Gas Installation -->
+            <article class="service-card">
+                <div>
+                    <div class="service-pill">Gas Installation</div>
+                    <h3>Safe Gas Piping & Appliances</h3>
+                    <p>
+                        Installation and maintenance of LPG piping and gas appliances according to
+                        safety standards and manufacturer guidelines.
+                    </p>
+                    <ul>
+                        <li>Gas piping and fittings from point of supply.</li>
+                        <li>Water heaters, ranges and cookers.</li>
+                        <li>Fireplaces, ovens, grills and space heaters.</li>
+                        <li>Repairs, maintenance and safety checks.</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <span>Safety-focused installations.</span>
+                    <a href="#">Read more</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- HSE / STRATEGY -->
+    <section id="hse">
+        <div class="section-header">
+            <h2>Health, Safety & Work Philosophy</h2>
+            <p>Safe worksites, well-managed projects and strong customer service.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Safety Culture</h3>
+                <p>
+                    Sciemec Construction is committed to ensuring that all products and activities
+                    on our customers’ sites are safe. We align our work with a health and safety
+                    initiative that manages potential risk in the work environment.
+                </p>
+                <p style="margin-top: 0.5rem;">
+                    We continuously improve our performance by focusing on innovative equipment,
+                    trained personnel and responsible on-site behaviour.
+                </p>
+            </div>
+            <div class="about-card">
+                <h3>Customer Service & Project Control</h3>
+                <p>
+                    Our project teams maintain tight control over inventory, deliveries, damage
+                    loss and invoicing, using structured processes and clear reporting.
+                </p>
+                <p style="margin-top: 0.5rem;">
+                    On the people side, we supply a qualified labour force that supports your
+                    project deadlines while prioritising worker safety and site cleanliness.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS (simple placeholder for now) -->
+    <section id="projects">
+        <div class="section-header">
+            <h2>Recent & Typical Projects</h2>
+            <p>From single rooms to full property upgrades.</p>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #4b5563; max-width: 700px;">
+            Sciemec Construction has worked on a range of residential and commercial projects,
+            including ceiling installations for new homes, painting and refurbishing of office
+            blocks, custom carpentry for retail spaces, and gas installations for domestic
+            and light-commercial clients. You can contact us for a project-specific reference
+            list or site visits.
+        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="section-header">
+            <h2>Contact Sciemec Construction</h2>
+            <p>Let’s discuss your next project or request a quotation.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Office & Contact Details</h3>
+
+                <div class="contact-row">
+                    <span>Address:</span>
+                    <span>15015 Ganges Road Extension, Belvedere, Harare, Zimbabwe</span>
+                </div>
+
+                <div class="contact-row">
+                    <span>Calling:</span>
+                    <span>+263 781 955 955 / +263 713 257 669</span>
+                </div>
+
+                <div class="contact-row">
+                    <span>WhatsApp:</span>
+                    <span>+263 775 285 106</span>
+                </div>
+
+                <div class="contact-row">
+                    <span>Email:</span>
+                    <span><a href="mailto:Sciemeq@gmail.com">Sciemeq@gmail.com</a></span>
+                </div>
+
+                <p style="margin-top: 0.8rem; font-size: 0.85rem;">
+                    You can call, WhatsApp or email us to book a site visit, request a quotation or
+                    discuss long-term maintenance contracts.
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Quick Enquiry Form</h3>
+                <!-- This form does not send yet (no backend) but can be wired later -->
+                <form>
+                    <label for="name">Your Name</label>
+                    <input id="name" type="text" placeholder="Full name" />
+
+                    <label for="phone">Phone / WhatsApp</label>
+                    <input id="phone" type="text" placeholder="+263..." />
+
+                    <label for="service">Service Needed</label>
+                    <input id="service" type="text" placeholder="Ceilings, painting, gas, carpentry..." />
+
+                    <label for="message">Project Details</label>
+                    <textarea id="message" placeholder="Tell us about your project, location and timeline."></textarea>
+
+                    <button type="button" onclick="alert('This demo form is not wired to email yet. Please use the phone or WhatsApp contacts for now.')">
+                        Submit Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>© 2025 Sciemec | Smart Science Labs & Construction</p>
+    <div class="footer-inner">
+        <span>© <span id="year"></span> Sciemec Construction. All rights reserved.</span>
+        <span>Designed for Zimbabwean residential & commercial clients.</span>
+    </div>
 </footer>
+
+<script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
