@@ -1,38 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact Sciemec</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Sciemec Construction</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="top-bar">
+    <span>15015 Ganges Road Extension, Belvedere, Harare, Zimbabwe</span>
+    <span>
+      Call: <a href="tel:+263781955955">+263 781 955 955</a> /
+      <a href="tel:+263713257669">+263 713 257 669</a> |
+      WhatsApp: <a href="https://wa.me/263775285106" target="_blank">+263 775 285 106</a>
+    </span>
+  </div>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="labs.html">Science Labs</a>
-        <a href="construction.html">Construction</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html" class="active">Contact</a>
+  <header class="main-header">
+    <div class="logo-area">
+      <div class="logo-text">
+        <span class="logo-main">Sciemec</span>
+        <span class="logo-sub">Construction</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
-</header>
+  </header>
 
-<section class="page-header">
-    <h1>Contact Us</h1>
-</section>
+  <main class="page">
+    <section class="page-header">
+      <h1>Contact Sciemec</h1>
+      <p>
+        Share a brief description of your project and we will get in touch to discuss
+        scope, site visits and next steps.
+      </p>
+    </section>
 
-<section class="contact-info">
-    <p><strong>Address:</strong> 15015 Ganges Road Extension, Belvedere, Harare</p>
-    <p><strong>Email:</strong> Sciemeq@gmail.com</p>
-    <p><strong>Call:</strong> +263 781 955 955 / +263 713 257 669</p>
-    <p><strong>WhatsApp:</strong> +263 775 285 106</p>
-</section>
+    <section class="section">
+      <div class="two-col">
+        <div>
+          <h2>Contact Details</h2>
+          <p>
+            <strong>Address:</strong><br />
+            15015 Ganges Road Extension,<br />
+            Belvedere, Harare, Zimbabwe
+          </p>
+          <p>
+            <strong>Email:</strong><br />
+            <a href="mailto:Sciemeq@gmail.com">Sciemeq@gmail.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong><br />
+            <a href="tel:+263781955955">+263 781 955 955</a> /
+            <a href="tel:+263713257669">+263 713 257 669</a>
+          </p>
+          <p>
+            <strong>WhatsApp:</strong><br />
+            <a href="https://wa.me/263775285106" target="_blank">+263 775 285 106</a>
+          </p>
+        </div>
+        <div>
+          <h2>Enquiry Form</h2>
+          <!-- This is a front-end only form. To make it work, you can later connect it to Formspree, Google Forms, etc. -->
+          <form class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your full name" required />
+            </label>
+            <label>
+              Organisation
+              <input type="text" name="organisation" placeholder="School / Company / NGO" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Phone / WhatsApp
+              <input type="tel" name="phone" placeholder="+263 ..." />
+            </label>
+            <label>
+              Project Type
+              <select name="project_type">
+                <option value="">Select...</option>
+                <option>New Building</option>
+                <option>Renovation / Upgrade</option>
+                <option>Science Laboratories</option>
+                <option>Civil Works</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              Brief Project Description
+              <textarea name="message" rows="4" placeholder="Site location, type of building, timelines, etc."></textarea>
+            </label>
 
-<footer>
-    <p>© 2025 Sciemec | Smart Science Labs & Construction</p>
-</footer>
+            <button type="submit" class="btn btn-primary" disabled>
+              Submit (Front-end only)
+            </button>
+            <p class="note">
+              This form is currently for layout only. To make it send emails, connect it
+              to a service such as Formspree or a custom backend later.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Sciemec Construction</h3>
+        <p>
+          15015 Ganges Road Extension,<br />
+          Belvedere, Harare, Zimbabwe
+        </p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>
+          Email:
+          <a href="mailto:Sciemeq@gmail.com">Sciemeq@gmail.com</a><br />
+          Call:
+          <a href="tel:+263781955955">+263 781 955 955</a> /
+          <a href="tel:+263713257669">+263 713 257 669</a><br />
+          WhatsApp:
+          <a href="https://wa.me/263775285106" target="_blank">+263 775 285 106</a>
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p class="footer-links">
+          <a href="about.html">About</a><br />
+          <a href="services.html">Services</a><br />
+          <a href="projects.html">Projects</a><br />
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Sciemec Construction. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
