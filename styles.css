@@ -40,12 +40,12 @@ ul {
 .top-bar .container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* For responsiveness */
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .top-bar a:hover {
-    color: #f0a500; /* Example accent color */
+    color: #f0a500;
 }
 
 /* Header */
@@ -67,7 +67,7 @@ ul {
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #004080; /* Example primary color */
+    color: #004080;
 }
 
 .logo-sub {
@@ -89,7 +89,26 @@ ul {
     border-bottom-color: #004080;
 }
 
-/* Page Header */
+/* Hero Section (Home) */
+.hero {
+    background-color: #004080;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Page Headers */
 .page-header {
     background-color: #004080;
     color: #fff;
@@ -102,14 +121,7 @@ ul {
     margin-bottom: 10px;
 }
 
-.page-header p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.9;
-}
-
-/* Service Sections */
+/* General Sections */
 .section {
     padding: 60px 0;
 }
@@ -122,72 +134,23 @@ ul {
     position: relative;
 }
 
-.section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #f0a500;
-    margin: 10px auto 0;
-}
-
 .section-alt {
-    background-color: #e9ecef; /* Light grey for alternate sections */
+    background-color: #e9ecef;
 }
 
 .two-col {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    align-items: center; /* Center items vertically */
+    align-items: center;
 }
 
 .two-col > div {
     flex: 1;
-    min-width: 300px; /* Ensure columns stack on small screens */
+    min-width: 300px;
 }
 
-.service-content p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
-.list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    position: relative;
-    padding-left: 25px;
-}
-
-.list li::before {
-    content: '✓';
-    color: #f0a500;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-.list li:last-child {
-    border-bottom: none;
-}
-
-/* CTA Section */
-.cta-section {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-.cta-inner h2 {
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.cta-inner p {
-    margin-bottom: 25px;
-    font-size: 1.2rem;
-}
-
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -195,6 +158,8 @@ ul {
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
 }
 
 .btn-primary {
@@ -204,6 +169,37 @@ ul {
 
 .btn-primary:hover {
     background-color: #d49200;
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: #004080;
+}
+
+/* Contact Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -220,16 +216,6 @@ ul {
     margin-bottom: 30px;
 }
 
-.site-footer h3, .site-footer h4 {
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.site-footer a:hover {
-    color: #f0a500;
-    text-decoration: underline;
-}
-
 .footer-bottom {
     background-color: #111;
     padding: 15px 0;
@@ -237,30 +223,19 @@ ul {
     font-size: 0.9em;
 }
 
-/* Responsive Tweaks */
+/* Responsive */
 @media (max-width: 768px) {
-    .top-bar .container {
+    .top-bar .container, .header-flex {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
-    
-    .header-flex {
-        flex-direction: column;
-        gap: 15px;
-    }
-
     .main-nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
     }
-
-    .main-nav a {
-        margin: 0 10px;
-    }
-
-    .two-col {
-        flex-direction: column;
-    }
+    .main-nav a { margin: 0; }
+    .hero h1 { font-size: 2rem; }
 }
