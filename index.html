@@ -3,69 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sciemec Construction | Building the Future</title>
+    <title>Sciemec – Mobile Science Labs & Construction</title>
+    
     <link rel="stylesheet" href="styles.css">
-    <img src="logo.png"alt="sciemec logo">
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="container">
-            <span>📍 15015 Ganges Road Extension, Belvedere, Harare</span>
-            <span>📞 <a href="tel:+263781955955">+263 781 955 955</a></span>
+<header class="site-header">
+    <div class="logo-wrap">
+        <img src="images/logo.jpg" alt="Sciemec Logo" class="logo">
+        <div class="brand-text">
+            <h1>Sciemec</h1>
+            <p class="tagline">Smart Science Labs & Construction</p>
         </div>
     </div>
+    
+    <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="mobile-labs.html">Mobile Labs</a>
+        <a href="fixed-labs.html">Fixed Labs</a>
+        <a href="construction.html">Construction</a>
+        <a href="classroom-upgrades.html">Upgrades</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <header>
-        <div class="container nav-container">
-            <div class="logo">Sciemec Construction</div>
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
-            </nav>
-        </div>
-    </header>
-
+<main>
     <section class="hero">
-        <div class="hero-content">
-            <h1>Building the Future of Science & Education</h1>
-            <p>Expert construction services for schools, laboratories, and commercial infrastructure in Zimbabwe.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn btn-primary">Get a Quote</a>
-                <a href="#" class="btn btn-secondary">View Our Work</a>
+        <div class="hero-text">
+            <h2>Bringing Modern Science Labs to Every School</h2>
+            <p>
+                Sciemec designs, builds, and equips mobile and fixed science laboratories
+                so that learners can experience real, practical science regardless of location.
+            </p>
+            <div class="hero-actions">
+                <a href="mobile-labs.html" class="btn primary">View Our Labs</a>
+                <a href="contact.html" class="btn secondary">Request a Quotation</a>
             </div>
         </div>
     </section>
 
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose Us?</h2>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>Expertise</h3>
-                    <p>Specialized knowledge in building high-standard science laboratories and educational facilities.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Quality</h3>
-                    <p>Commitment to durable materials and superior workmanship on every civil works project.</p>
-                </div>
-            </div>
+    <section class="section">
+        <h2>What We Do</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>Mobile Science Labs</h3>
+                <p>
+                    Fully equipped mobile laboratories that bring practical science
+                    to schools without traditional lab infrastructure.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Lab Construction & Upgrades</h3>
+                <p>
+                    Design and construction of new school laboratories,
+                    including benches, gas, water, and safe storage solutions.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Equipment & Consumables</h3>
+                <p>
+                    Supply of essential laboratory equipment, chemicals, glassware,
+                    models, and teaching aids for all science subjects.
+                </p>
+            </article>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Sciemec Construction. All rights reserved.</p>
+    <section class="section">
+        <div class="section-header">
+            <h2>Project Gallery</h2>
+            <a href="gallery.html" class="link-more">View full gallery →</a>
         </div>
-    </footer>
+        <div class="gallery-grid">
+            <img src="images/gallery1.jpg" alt="Sciemec project photo 1">
+            <img src="images/gallery2.jpg" alt="Sciemec project photo 2">
+            <img src="images/gallery3.jpg" alt="Sciemec project photo 3">
+        </div>
+    </section>
+
+    <section class="section callout">
+        <h2>Need a Lab for Your School?</h2>
+        <p>
+            Talk to us about mobile labs, new lab construction, or a starter equipment package
+            that matches your budget and syllabus.
+        </p>
+        <a href="contact.html" class="btn primary">Contact Sciemec</a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© <span id="year"></span> Sciemec Construction. All rights reserved.</p>
+    <p><strong>Registered Address:</strong> 15015 Ganges Road Extension, Belvedere, Harare</p>
+    <p>Phone: +263 781 955 955</p>
+</footer>
+
+<script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
-
-
-
