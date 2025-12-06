@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sciemec – Smart Science Labs</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Labs | Sciemec</title>
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header>
-    <nav>
+<header class="site-header">
+    <div class="logo-wrap">
+        <img src="images/logo.jpg" alt="Sciemec Logo" class="logo">
+        <div class="brand-text">
+            <h1>Sciemec</h1>
+            <p class="tagline">Smart Science Labs & Construction</p>
+        </div>
+    </div>
+    
+    <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="labs.html" class="active">Science Labs</a>
+        <a href="mobile-labs.html" class="active">Mobile Labs</a>
+        <a href="fixed-labs.html">Fixed Labs</a>
         <a href="construction.html">Construction</a>
-        <a href="projects.html">Projects</a>
+        <a href="classroom-upgrades.html">Upgrades</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="page-header">
-    <h1>Smart Science Laboratories</h1>
-</section>
+<main>
+    <section class="hero" style="min-height: 200px; padding: 40px 20px;">
+        <div class="hero-text">
+            <h2>Smart Science Laboratories</h2>
+            <p>Bringing practical science to every learner.</p>
+        </div>
+    </section>
 
-<section class="content-block">
-    <h2>Fixed Science Labs</h2>
-    <p>Our fixed laboratories are designed according to international standards and aligned with ZIMSEC and Cambridge requirements.</p>
-</section>
+    <section class="section">
+        
+        <article class="card" style="max-width: 800px; margin: 20px auto;">
+            <h3>Mobile Science Laboratories</h3>
+            <p>
+                Custom-built mobile units with workbenches, gas systems, sinks, chemical storage, 
+                apparatus, and digital teaching tools. These allow you to move the "lab" from 
+                classroom to classroom easily.
+            </p>
+        </article>
 
-<section class="content-block">
-    <h2>Mobile Science Laboratories</h2>
-    <p>Custom-built mobile units with workbenches, gas systems, sinks, chemical storage, apparatus and digital teaching tools.</p>
-</section>
+        <article class="card" style="max-width: 800px; margin: 20px auto;">
+            <h3>Fixed Science Labs</h3>
+            <p>
+                Our fixed laboratories are designed according to international standards and 
+                aligned with ZIMSEC and Cambridge requirements.
+            </p>
+        </article>
 
-<section class="content-block">
-    <h2>STEM Equipment Supply</h2>
-    <ul>
-        <li>Chemistry apparatus & chemicals</li>
-        <li>Physics kits</li>
-        <li>Biology models</li>
-        <li>Primary & secondary STEM kits</li>
-    </ul>
-</section>
+        <article class="card" style="max-width: 800px; margin: 20px auto;">
+            <h3>STEM Equipment Supply</h3>
+            <ul style="text-align: left; padding-left: 20px;">
+                <li>Chemistry apparatus & chemicals</li>
+                <li>Physics kits</li>
+                <li>Biology models</li>
+                <li>Primary & secondary STEM kits</li>
+            </ul>
+        </article>
+        
+        <div style="text-align: center; margin-top: 30px;">
+             <a href="contact.html" class="btn primary">Request a Quote for These Labs</a>
+        </div>
 
-<footer>
-    <p>© 2025 Sciemec | Smart Science Labs & Construction</p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Sciemec Construction. All rights reserved.</p>
+    <p><strong>Registered Address:</strong> 15015 Ganges Road Extension, Belvedere, Harare</p>
+    <p>Phone: +263 781 955 955</p>
 </footer>
 
 </body>
