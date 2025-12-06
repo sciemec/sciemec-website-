@@ -8,133 +8,84 @@
 </head>
 <body>
   <div class="top-bar">
-    <span>15015 Ganges Road Extension, Belvedere, Harare, Zimbabwe</span>
-    <span>
-      Call: <a href="tel:+263781955955">+263 781 955 955</a> /
-      <a href="tel:+263713257669">+263 713 257 669</a> |
-      WhatsApp: <a href="https://wa.me/263775285106" target="_blank">+263 775 285 106</a>
-    </span>
+    <div class="container">
+      <span>15015 Ganges Road Extension, Belvedere, Harare</span>
+    </div>
   </div>
 
   <header class="main-header">
-    <div class="logo-area">
-      <div class="logo-text">
-        <span class="logo-main">Sciemec</span>
-        <span class="logo-sub">Construction</span>
+    <div class="container header-flex">
+      <div class="logo-area">
+        <span class="logo-text">Sciemec <span class="logo-sub">Construction</span></span>
       </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html" class="active">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
-  <main class="page">
+  <main>
     <section class="page-header">
-      <h1>Project Examples</h1>
-      <p>
-        Below are sample descriptions of the kind of projects Sciemec can deliver.
-        Replace these with your real projects and photos as your portfolio grows.
-      </p>
+      <div class="container">
+        <h1>Our Recent Work</h1>
+        <p>A showcase of our science labs and construction projects across Zimbabwe.</p>
+      </div>
     </section>
 
     <section class="section">
-      <div class="grid three-cols">
-        <div class="card project-card">
-          <h3>School Laboratory Upgrade</h3>
-          <p>
-            Conversion of existing classrooms into fully functional science laboratories,
-            including benches, sinks, gas points and storage.
-          </p>
-          <p class="project-meta">Scope: Demolition, civil works, services, finishes</p>
-        </div>
+      <div class="container">
+        
+        <!-- PROJECT GALLERY GRID -->
+        <div class="gallery-grid">
+          
+          <!-- Project Item 1 -->
+          <div class="gallery-item">
+            <!-- REPLACE 'images/project1.jpg' WITH YOUR ACTUAL IMAGE FILENAME -->
+            <img src="images/project1.jpg" alt="Science Lab Project" class="project-img">
+            <div class="project-info">
+              <h3>Science Laboratory</h3>
+              <p>Modern chemistry lab fit-out for a local high school.</p>
+            </div>
+          </div>
 
-        <div class="card project-card">
-          <h3>New Clinic Block</h3>
-          <p>
-            Construction of outpatient rooms, dispensary, waiting areas and support spaces
-            to expand healthcare capacity in a local community.
-          </p>
-          <p class="project-meta">Scope: Full building works & services</p>
-        </div>
+          <!-- Project Item 2 -->
+          <div class="gallery-item">
+            <!-- REPLACE 'images/project2.jpg' WITH YOUR ACTUAL IMAGE FILENAME -->
+            <img src="images/project2.jpg" alt="Civil Works" class="project-img">
+            <div class="project-info">
+              <h3>Civil Works</h3>
+              <p>Foundation and drainage systems for a commercial block.</p>
+            </div>
+          </div>
 
-        <div class="card project-card">
-          <h3>Industrial Workshop & Offices</h3>
-          <p>
-            Structural steel and masonry workshop with attached office block, ablutions
-            and external yard works.
-          </p>
-          <p class="project-meta">Scope: Steelwork, concrete, finishes, external works</p>
-        </div>
-      </div>
-    </section>
+          <!-- Project Item 3 -->
+          <div class="gallery-item">
+            <!-- REPLACE 'images/project3.jpg' WITH YOUR ACTUAL IMAGE FILENAME -->
+            <img src="images/project3.jpg" alt="Classroom Block" class="project-img">
+            <div class="project-info">
+              <h3>Classroom Block</h3>
+              <p>New double-storey classroom block construction.</p>
+            </div>
+          </div>
+          
+           <!-- Add more items by copying the block above -->
 
-    <section class="section section-alt">
-      <div class="two-col">
-        <div>
-          <h2>Documenting Your Portfolio</h2>
-          <p>
-            As your projects progress, you can update this page with:
-          </p>
-          <ul class="list">
-            <li>Project name and location</li>
-            <li>Client type (school, private company, NGO, etc.)</li>
-            <li>Scope of work (new build, upgrade, renovation)</li>
-            <li>Key technical features (labs, workshops, services, finishes)</li>
-          </ul>
-        </div>
-        <div>
-          <p>
-            You can also add photos into an <code>images/projects</code> folder and show them
-            here using <code>&lt;img&gt;</code> tags. GitHub Pages will serve these
-            just like the HTML and CSS files.
-          </p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-grid">
-      <div>
-        <h3>Sciemec Construction</h3>
-        <p>
-          15015 Ganges Road Extension,<br />
-          Belvedere, Harare, Zimbabwe
-        </p>
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; <span id="year"></span> Sciemec Construction.
       </div>
-      <div>
-        <h4>Contact</h4>
-        <p>
-          Email:
-          <a href="mailto:Sciemeq@gmail.com">Sciemeq@gmail.com</a><br />
-          Call:
-          <a href="tel:+263781955955">+263 781 955 955</a> /
-          <a href="tel:+263713257669">+263 713 257 669</a><br />
-          WhatsApp:
-          <a href="https://wa.me/263775285106" target="_blank">+263 775 285 106</a>
-        </p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <p class="footer-links">
-          <a href="about.html">About</a><br />
-          <a href="services.html">Services</a><br />
-          <a href="projects.html">Projects</a><br />
-          <a href="contact.html">Contact</a>
-        </p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; <span id="year"></span> Sciemec Construction. All rights reserved.
     </div>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
