@@ -18,7 +18,43 @@
 *::after {
   box-sizing: border-box;
 }
+/* --- Header & Logo Styling --- */
 
+/* The main header container */
+.site-header {
+    display: flex;
+    justify-content: space-between; /* Pushes logo/text to the left, menu to the right */
+    align-items: center; /* Centers everything vertically */
+    padding: 10px 20px;
+    background-color: #ffffff; /* White background */
+    border-bottom: 1px solid #eaeaea; /* A subtle line at the bottom */
+}
+
+/* Container for the logo and text */
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between the logo image and the text */
+}
+
+/* THE IMPORTANT PART: Sizing the logo */
+.logo {
+    height: 60px; /* This makes the logo small! Adjust this number to your liking. */
+    width: auto;  /* Keeps the logo's proportions correct */
+}
+
+/* Styling for the company name text */
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Size of "Sciemec" */
+    color: #003366; /* A nice dark blue, change as you like */
+}
+
+.tagline {
+    margin: 0;
+    font-size: 0.85rem; /* Size of the tagline below it */
+    color: #666666; /* A lighter gray color */
+}
 body {
   margin: 0;
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -492,3 +528,4 @@ footer {
     margin-top: 10px;
   }
 }
+
