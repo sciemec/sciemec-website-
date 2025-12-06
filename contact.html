@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Sciemec Construction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <span>15015 Ganges Road Extension, Belvedere, Harare</span>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-flex">
+      <div class="logo-area">
+        <span class="logo-text">Sciemec <span class="logo-sub">Construction</span></span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Get in Touch</h2>
+          <p>
+            <strong>Address:</strong><br>
+            15015 Ganges Road Extension,<br>
+            Belvedere, Harare, Zimbabwe
+          </p>
+          <p>
+            <strong>Phone:</strong><br>
+            <a href="tel:+263781955955">+263 781 955 955</a><br>
+            <a href="tel:+263713257669">+263 713 257 669</a>
+          </p>
+          <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:Sciemeq@gmail.com">Sciemeq@gmail.com</a>
+          </p>
+          <br>
+          <a href="https://wa.me/263775285106" class="btn btn-primary">Chat on WhatsApp</a>
+        </div>
+        <div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="How can we help?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; <span id="year"></span> Sciemec Construction.
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
