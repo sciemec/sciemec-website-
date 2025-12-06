@@ -1,92 +1,266 @@
-/* =========================
-   PROJECTS / GALLERY
-   ========================= */
-
-.gallery-section {
-    padding: 80px 0;
-    background: #f5f7fb;
-}
-
-/* Section heading */
-.gallery-section .section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #002b5c;  /* Sciemec blue-ish */
-}
-
-.gallery-section .section-intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: #555;
-    font-size: 0.98rem;
-    line-height: 1.6;
-}
-
-/* Grid layout */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-}
-
-/* Individual project card */
-.gallery-item {
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-}
-
-/* Project image */
-.gallery-item img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-}
-
-/* Text content under image */
-.gallery-item-body {
-    padding: 18px 20px 20px;
-}
-
-.gallery-item h3 {
-    font-size: 1.05rem;
-    margin: 0 0 6px;
-    color: #002b5c;
-}
-
-.gallery-item .project-meta {
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #8892a0;
-    margin-bottom: 8px;
-}
-
-.gallery-item p {
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-size: 0.95rem;
-    color: #666;
+    padding: 0;
 }
 
-/* Mobile tweak */
-@media (max-width: 600px) {
-    .gallery-section {
-        padding: 50px 15px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container Utility */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* For responsiveness */
+    gap: 10px;
+}
+
+.top-bar a:hover {
+    color: #f0a500; /* Example accent color */
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004080; /* Example primary color */
+}
+
+.logo-sub {
+    color: #555;
+    font-weight: normal;
+}
+
+.main-nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #004080;
+    border-bottom-color: #004080;
+}
+
+/* Page Header */
+.page-header {
+    background-color: #004080;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Service Sections */
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    color: #004080;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f0a500;
+    margin: 10px auto 0;
+}
+
+.section-alt {
+    background-color: #e9ecef; /* Light grey for alternate sections */
+}
+
+.two-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center; /* Center items vertically */
+}
+
+.two-col > div {
+    flex: 1;
+    min-width: 300px; /* Ensure columns stack on small screens */
+}
+
+.service-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 25px;
+}
+
+.list li::before {
+    content: '✓';
+    color: #f0a500;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-inner h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.cta-inner p {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #f0a500;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #d49200;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 40px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.site-footer h3, .site-footer h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.site-footer a:hover {
+    color: #f0a500;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-flex {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .gallery-grid {
-        gap: 18px;
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .main-nav a {
+        margin: 0 10px;
+    }
+
+    .two-col {
+        flex-direction: column;
     }
 }
