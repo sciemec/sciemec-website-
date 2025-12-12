@@ -1,107 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sciemec – Mobile Science Labs & Construction</title>
-    
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sci-Guru | LEC Biotec</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="site-header">
-    <div class="logo-wrap">
-        <img src="images/logo.jpg" alt="Sciemec Logo" class="logo">
-        <div class="brand-text">
-            <h1>Sciemec</h1>
-            <p class="tagline">Smart Science Labs & Construction</p>
+  <header class="topbar">
+    <div class="container row">
+      <div class="brand">
+        <img src="images/lec-logo.png" alt="LEC Biotec Logo">
+        <div class="title">
+          <b>Sci-Guru</b>
+          <span>AI Science Tutor • ZIMSEC / Heritage-Based</span>
         </div>
+      </div>
+
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="tutor.html">AI Tutor</a>
+        <a href="virtual-lab-hub.html">Virtual Lab Hub</a>
+      </nav>
     </div>
-    
-    <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="mobile-labs.html">Mobile Labs</a>
-        <a href="fixed-labs.html">Fixed Labs</a>
-        <a href="construction.html">Construction</a>
-        <a href="classroom-upgrades.html">Upgrades</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+  </header>
 
-<main>
+  <main class="container">
     <section class="hero">
-        <div class="hero-text">
-            <h2>Bringing Modern Science Labs to Every School</h2>
-            <p>
-                Sciemec designs, builds, and equips mobile and fixed science laboratories
-                so that learners can experience real, practical science regardless of location.
-            </p>
-            <div class="hero-actions">
-                <a href="mobile-labs.html" class="btn primary">View Our Labs</a>
-                <a href="contact.html" class="btn secondary">Request a Quotation</a>
-            </div>
+      <div class="heroCard">
+        <div>
+          <h1>Learn science the smart way — with local Zimbabwean examples.</h1>
+          <p>
+            Sci-Guru helps learners study Forms 1–4 with explanations, quizzes, and practical guidance aligned to
+            the ZIMSEC / Heritage-Based curriculum.
+          </p>
+          <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:10px;">
+            <span class="badge">✅ Neat interface</span>
+            <span class="badge">✅ Organized pages</span>
+            <span class="badge">✅ Phone-friendly</span>
+          </div>
         </div>
+
+        <div class="cta">
+          <a class="btn primary" href="tutor.html">Open Sci-Guru AI Tutor</a>
+          <a class="btn" href="virtual-lab-hub.html">Open Virtual Lab Hub</a>
+          <a class="btn" href="tutor.html#how-to">How to use</a>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-        <h2>What We Do</h2>
-        <div class="cards">
-            <article class="card">
-                <h3>Mobile Science Labs</h3>
-                <p>
-                    Fully equipped mobile laboratories that bring practical science
-                    to schools without traditional lab infrastructure.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Lab Construction & Upgrades</h3>
-                <p>
-                    Design and construction of new school laboratories,
-                    including benches, gas, water, and safe storage solutions.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Equipment & Consumables</h3>
-                <p>
-                    Supply of essential laboratory equipment, chemicals, glassware,
-                    models, and teaching aids for all science subjects.
-                </p>
-            </article>
+    <section class="grid">
+      <div class="card">
+        <h2>AI Tutor</h2>
+        <p>Ask questions, pick topics, generate quizzes, and get practical steps.</p>
+        <div class="actions">
+          <a class="btn primary" href="tutor.html">Go to Tutor</a>
         </div>
+      </div>
+
+      <div class="card">
+        <h2>Virtual Lab Hub</h2>
+        <p>Open simulations for mixtures, electricity, density, fire experiments and more.</p>
+        <div class="actions">
+          <a class="btn primary" href="virtual-lab-hub.html">Go to Labs</a>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-        <div class="section-header">
-            <h2>Project Gallery</h2>
-            <a href="gallery.html" class="link-more">View full gallery →</a>
-        </div>
-        <div class="gallery-grid">
-            <img src="images/gallery1.jpg" alt="Sciemec project photo 1">
-            <img src="images/gallery2.jpg" alt="Sciemec project photo 2">
-            <img src="images/gallery3.jpg" alt="Sciemec project photo 3">
-        </div>
-    </section>
+    <footer class="footer">
+      <div>
+        © <span id="yr"></span> LEC Biotec • sales@lecbiotec.com • Harare, Zimbabwe
+      </div>
+    </footer>
+  </main>
 
-    <section class="section callout">
-        <h2>Need a Lab for Your School?</h2>
-        <p>
-            Talk to us about mobile labs, new lab construction, or a starter equipment package
-            that matches your budget and syllabus.
-        </p>
-        <a href="contact.html" class="btn primary">Contact Sciemec</a>
-    </section>
-</main>
-
-<footer class="site-footer">
-    <p>© <span id="year"></span> Sciemec Construction. All rights reserved.</p>
-    <p><strong>Registered Address:</strong> 15015 Ganges Road Extension, Belvedere, Harare</p>
-    <p>Phone: +263 781 955 955</p>
-</footer>
-
-<script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
